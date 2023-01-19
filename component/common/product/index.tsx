@@ -605,6 +605,7 @@ const Product = (props: Props) => {
         { ...productData, plpData },
         'pdp'
       );
+      console.log(productData?.urlKey, productData?.type, "testing")
       let state: any = {
         urlKey:
           productData && productData.type == 'simple'
