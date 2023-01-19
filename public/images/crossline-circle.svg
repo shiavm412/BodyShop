@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40pt" height="40pt" viewBox="0 0 40 40">
+<g enable-background="new">
+<clipPath id="cp0">
+<path transform="matrix(1,0,0,-1,0,40)" d="M 0 20 C 0 31.045695 8.954306 40 20 40 C 31.045695 40 40 31.045695 40 20 C 40 8.954306 31.045695 0 20 0 C 8.954306 0 0 8.954306 0 20 Z " fill-rule="evenodd"/>
+</clipPath>
+<g clip-path="url(#cp0)">
+<path transform="matrix(1,0,0,-1,0,40)" d="M 20 1 C 9.50659 1 1 9.50659 1 20 L -1 20 C -1 8.402021 8.40202 -1 20 -1 L 20 1 Z M 39 20 C 39 9.50659 30.49341 1 20 1 L 20 -1 C 31.597979 -1 41 8.402021 41 20 L 39 20 Z M 20 39 C 30.49341 39 39 30.49341 39 20 L 41 20 C 41 31.59798 31.597979 41 20 41 L 20 39 Z M 20 41 C 8.40202 41 -1 31.59798 -1 20 L 1 20 C 1 30.49341 9.50659 39 20 39 L 20 41 Z " fill="#cacaca"/>
+</g>
+<path transform="matrix(.719844,-.694136,-.694136,-.719844,25.241248,52.953889)" d="M 0 27.719727 L 38.8973 27.719727 L 38.8973 28.719727 L 0 28.719727 L 0 27.719727 Z " fill="#cacaca"/>
+</g>
+</svg>

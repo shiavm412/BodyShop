@@ -1,0 +1,47 @@
+stages:
+  - dev_build
+  - dev_deploy
+
+dev_build:
+  stage: dev_build
+  script:
+    - cp $DEV_ENV .env
+    - cp .env env
+    - npm cache clean --force
+    - npm cache verify
+    #- npm i
+    - npm i --force
+    - ls -la
+    - cat env
+    - pwd
+  #  - CI=false npm run build
+    - npm run build
+   # - npm run start 
+    - tar -czf react-ssr-nextjs_artifact.tar.gz * .next 
+  artifacts:
+    paths:
+      - react-ssr-nextjs_artifact.tar.gz
+    expire_in: 1 hrs 00 min
+  only:
+    - dev
+
+dev_deploy:
+  stage: dev_deploy
+  image: node:14.19
+  before_script:
+    - apk update && apk add openssh-client bash
+    - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - touch ~/.ssh/config
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - ssh-keyscan -H $DEPLOY_SERVER_IP >> ~/.ssh/known_hosts
+  script:
+    - echo "Delploying project..."
+    - pwd
+    - ls -la
+    - scp -rp react-ssr-nextjs_artifact.tar.gz bodyshop_usr@$DEPLOY_SERVER_IP:/var/www/html/bodyshop_app/nextjs/dev
+    - ssh bodyshop_usr@$DEPLOY_SERVER_IP 'bash' < ./pipescripts/start_dev.sh
+    - echo "Finished deploying the app."
+  only:
+    - dev

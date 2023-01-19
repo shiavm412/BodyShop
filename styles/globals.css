@@ -1,27 +1,389 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* text-transform: none; */
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.carousel .carousel-status {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html, body {
+  -webkit-tap-highlight-color: transparent;
+ 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input:focus,
+input {
+  outline: none;
+}
+
+form {
+  width: 100%;
+}
+
+.root-container{
+  max-width: 1920px;
+  margin:0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.input-position {
+  width: 300px;
+  position: relative;
+}
+
+
+/* .Mui-checked,
+.MuiCheckbox-colorSecondary.Mui-checked {
+  color: "#3D857E";
+} */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.MuiButton-contained.Mui-disabled {
+  background-color: var(--disabled-color) !important;
+  color: var(--white) !important;
+}
+
+:root {
+  --primary: #044236;
+  --white: #ffffff;
+  --black: #000000;
+  --black300: #0d0d0d;
+  --secondary-black: #333333;
+  --main-opacity: #3d857e;
+  --creame-color: #f9f6ee;
+  --dark-creame-color: #e7dcc1;
+  --medium-creame-color: #f7f3e8;
+  --light-creame-color: #f8f3e8;
+  --backgroun-color: #fafafa;
+  --border-color: #e2e2e2;
+  --disabled-color: #b0c1b7;
+  --text-color: #f2f2f2;
+  --light-gray-text: #999999;
+  --light-gray: #666666;
+  --delet-color: #f44336;
+  --icon-color: #dadada;
+  --light-green: #d6ce4b;
+  --gray: #f8f3e9;
+  --max-width: 1200px;
+  --green-color: #004236;
+  --green-color-100: #044236;
+  --grey-color300: #dfe3e8;
+  --grey-color100: #919eab;
+  --dark-grey: #212b36;
+  --text-green: #004236;
+  --box-shadow-div: 0px 0px 30px rgba(146, 146, 146, 0.1);
+  --stepper-color: #339f4b;
+  --grey-color: #666666;
+  --yellow-color: #D6CD56;
+  --light-blue: #DCEFE4;
+  /* --box-shadow-div: 0px 0px 30px rgba(233, 36, 36, 0.1); */
+}
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.css-dqr9h-MuiRating-label {
+  padding: 15px 18px 15px 20px;
+}
+
+
+
+/* / hide & show css / */
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+@media only screen and (max-width: 2000px) {
+  .d-xl-block {
+    display: block;
   }
-  body {
-    color: white;
-    background: black;
+
+  .d-xl-none {
+    display: none;
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  .d-lg-block {
+    display: block;
+  }
+
+  .d-lg-none {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .d-md-block {
+    display: block;
+  }
+
+  .d-md-none {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .d-sm-block {
+    display: block;
+  }
+
+  .d-sm-none {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .d-xs-block {
+    display: block;
+  }
+
+  .d-xs-none {
+    display: none;
+  }
+}
+
+
+
+@font-face {
+  font-family: "Work Sans Medium";
+  src: url("/fonts/Work_Sans/WorkSans-Medium.ttf")
+}
+
+@font-face {
+  font-family: "Work Sans SemiBold";
+  src: url("/fonts/Work_Sans/WorkSans-SemiBold.ttf")
+}
+
+@font-face {
+  font-family: "Work Sans Bold";
+  src: url("/fonts/Work_Sans/WorkSans-Bold.ttf")
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("/fonts/Work_Sans/WorkSans-Regular.ttf")
+}
+
+@font-face {
+  font-family: "Work Sans Regular";
+  src: url("/fonts/Work_Sans/WorkSans-Regular.ttf")
+}
+
+@font-face {
+  font-family: "Work Sans Light";
+  src: url("/fonts/Work_Sans/WorkSans-Light.ttf")
+}
+
+
+@font-face {
+  font-family: "Druk Bold";
+  src: url("/fonts/Druk/Druk-Bold.otf")
+}
+
+@font-face {
+  font-family: "Druk";
+  src: url("/fonts/Druk/Druk-Bold.otf")
+}
+
+
+
+@font-face {
+  font-family: "Recoleta";
+  src: url("/fonts/Recoleta/Recoleta-Regular.ttf")
+}
+
+@font-face {
+  font-family: "Recoleta Bold";
+  src: url("/fonts/Recoleta/Recoleta-Bold.ttf")
+}
+
+@font-face {
+  font-family: "Recoleta Medium";
+  src: url("/fonts/Recoleta/Recoleta-Medium.ttf")
+}
+
+@font-face {
+  font-family: "Recoleta Alt";
+  src: url("/fonts/Recoleta/RecoletaAlt-Regular.ttf")
+}
+
+@font-face {
+  font-family: "Recoleta Alt Bold";
+  src: url("/fonts/Recoleta/RecoletaAlt-Bold.ttf")
+}
+
+@font-face {
+  font-family: "Recoleta Alt SemiBold";
+  src: url("/fonts/Recoleta/RecoletaAlt-SemiBold.ttf")
+}
+
+@font-face {
+  font-family: "Recoleta Alt Medium";
+  src: url("/fonts/Recoleta/RecoletaAlt-Medium.ttf")
+}
+
+
+.carousel.carousel-slider {
+  overflow: inherit;
+}
+
+.control-arrow {
+  opacity: 1 !important;
+}
+
+
+.carousel, .carousel.carousel-slider, .control-arrow {
+  opacity: 1;
+  top: -10px;
+}
+
+.carousel .carousel-status {
+  display: none;
+}
+
+.carousel .control-next.control-arrow:before {
+  background-color: #fff;
+  min-height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 1rem;
+  color: #0f4236;
+  /* background-image: url("require(../../../../assets/images/testinmonialArrow.svg"); */
+}
+
+.carousel .thumbs-wrapper {
+  margin: 0px;
+  overflow: hidden;
+}
+
+.carousel .control-dots {
+  position: absolute;
+  bottom: 0;
+  margin: -30px 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.carousel .control-next.control-arrow:before {
+  background-color: #fff;
+  min-height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  padding-top: 0px;
+  margin-top: 30px;
+  /* padding: 10px; */
+  margin: 30px -40px 0px 0px;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  color: #0f4236;
+  transform: rotate(180deg);
+  background-image: url("/images/testinmonialArrow.svg");
+}
+
+.carousel .control-next.control-arrow:before {
+  border-left: 2px solid #fff;
+}
+
+.carousel .control-next.control-arrow:before:hover {
+  background: none;
+}
+
+.carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
+  /* margin: 0 0px; */
+  display: inline-block;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  content: "";
+}
+
+.carousel .control-prev.control-arrow:before {
+  background-color: #fff;
+  min-height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  padding-top: 0px;
+  margin-top: 30px;
+  margin: 30px 0px 0px -40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #0f4236;
+  background-image: url("/images/testinmonialArrow.svg");
+
+  /* background-image: url("require(../../../../assets/images/testinmonialArrow.svg"); */
+}
+
+/* .carousel .control-prev.control-arrow::before:hover {
+  background: none;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+  background: none;
+} */
+
+.carousel .control-pre.control-arrow:before {
+  border-left: 2px solid #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel .control-prev, .carousel .control-prev:hover {
+    display: none;
+  }
+  .carousel .control-next, .carousel .control-next:hover {
+    display: none;
+  }
+}
+
+.control-arrow:hover {
+  background: none !important;
+}
